@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class FunctionhallpageComponent implements OnInit {
   
   temp;
-  functionHall=[];
+  data=[];
   searchParam: any;
   filteredData: any[];
   constructor(
@@ -39,14 +39,14 @@ getFunctionHallData() {
 
     this.searchSvc.findFunctionhallByNameAndCity(searchvalue)
     .subscribe( Response => {
-    let resData =Response.functionHalls;
+    let resData =Response.data;
     console.log(resData,"res")
       // let res Response;
       console.log(this.temp,"28");
       resData.forEach(element => {
         if(this.temp == element.ownerId){
           console.log(element);
-    this.functionHall.push(element)
+    this.data.push(element)
         }
       });
   // console.log(Response,"response")
