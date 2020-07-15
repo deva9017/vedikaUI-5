@@ -9,7 +9,7 @@ import { SearchbarService } from '../searchbar/searchbar.service';
 })
 export class FunctionhallComponent implements OnInit {
  
-  functionHalls: any;
+  data= [];
   query: any; 
   searchParam: any;
   filteredData: any[];
@@ -31,7 +31,7 @@ let searchvalue=localStorage.getItem("searchItem")
   console.log(searchvalue)
   this.searchSvc.findFunctionhallByNameAndCity(searchvalue).subscribe(data=>{
     console.log(data);
-  this.functionHalls = data["functionHalls"]
+  this.data = data["data"]
   })
   
 
