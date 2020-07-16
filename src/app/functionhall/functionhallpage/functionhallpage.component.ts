@@ -53,4 +53,4 @@ getFunctionHallData() {
   
   },(error) => { console.log(error);})
   }
-}   
+}
