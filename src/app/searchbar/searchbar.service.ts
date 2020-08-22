@@ -19,7 +19,7 @@ export class SearchbarService {
 //  }
   findFunctionhallByNameAndCity(city):Observable<any>
   {
-    return this.http.get('http://52.66.117.78:8057/api/functionhallsBy/?city='+city);
+    return this.http.get('http://15.207.111.85:31774/api/functionhallsBy/?city='+city);
   }
   // getFunctionhallByName(name):Observable<any>
   // {
